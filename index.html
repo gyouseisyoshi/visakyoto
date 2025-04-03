@@ -8,17 +8,17 @@
 </head>
 <body>
 
+  <!-- ヘッダー -->
   <header class="header">
     <div class="header-inner">
-      <div class="logo-area">
-        <img src="assets/images/logo.png" alt="ロゴ" class="logo" />
-      </div>
+      <div class="logo-area"></div>
       <nav class="nav-area">
         <button id="lang-switch">English</button>
       </nav>
     </div>
   </header>
 
+  <!-- Heroセクション -->
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-content lang ja">
@@ -28,14 +28,15 @@
           やまだ ビザ じむしょ（ぎょうせいしょし・にほんご きょうし）
         </p>
       </div>
-      <div class="hero-content lang en" style="display: none;">        <h1>Yamada VISA Support Office</h1>
+      <div class="hero-content lang en" style="display: none;">
+        <h1>Yamada VISA Support Office</h1>
         <p>Certified Immigration Specialist & Japanese Language Teacher</p>
       </div>
       <div class="hero-image"></div>
     </div>
   </section>
 
-  <!-- ご挨拶セクション -->
+  <!-- ご挨拶 -->
   <section class="greeting lang ja">
     <h2>ご挨拶</h2>
     <p class="greeting-text">
@@ -63,6 +64,39 @@
     </p>
   </section>
 
+  <!-- メインコンテンツ例（事務所情報など） -->
+  <main class="main-content">
+    <!-- 日本語 -->
+    <section class="lang ja">
+      <div class="card">
+        <h2>事務所所在地・連絡先</h2>
+        <ul>
+          <li>事務所：京都市</li>
+          <li>営業時間：9:00～17:00（土日祝休）</li>
+          <li>メール：<a href="mailto:visakyoto@yahoo.co.jp">visakyoto@yahoo.co.jp</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 英語 -->
+    <section class="lang en" style="display:none;">
+      <div class="card">
+        <h2>Office Location & Contact</h2>
+        <ul>
+          <li>Office: Kyoto City</li>
+          <li>Business Hours: 9:00–17:00 (Closed Sat, Sun & Public Holidays)</li>
+          <li>Email: <a href="mailto:visakyoto@yahoo.co.jp">visakyoto@yahoo.co.jp</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <p>© 2025 Yamada Immigration & International Legal Office</p>
+  </footer>
+
+  <!-- 言語切替スクリプト -->
   <script>
     const switchBtn = document.getElementById("lang-switch");
     const jaEls = document.querySelectorAll(".lang.ja");

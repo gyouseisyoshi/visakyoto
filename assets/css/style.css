@@ -1,4 +1,4 @@
-/* 基本リセット */
+/* リセット */
 * {
   margin: 0;
   padding: 0;
@@ -47,7 +47,7 @@ body {
   background-color: #0056b3;
 }
 
-/* Heroセクション */
+/* Hero セクション */
 .hero {
   position: relative;
   background: linear-gradient(to right, #f3f6f8, #ffffff);
@@ -62,7 +62,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 280px;
+  min-height: 240px;
 }
 
 .hero-content {
@@ -71,7 +71,19 @@ body {
   padding: 0 20px;
 }
 
-/* 桜画像フェード */
+.hero h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Hero 右側画像 */
 .hero-image {
   position: absolute;
   top: 0;
@@ -88,32 +100,9 @@ body {
   pointer-events: none;
 }
 
-/* ロゴ */
-.logo {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 16px;
-}
-
-/* 見出し・本文 */
-.hero h1 {
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: #222;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 0.95rem;
-  color: #555;
-}
-
-/* ご挨拶セクション */
+/* ご挨拶 */
 .greeting {
-  margin: 30px 0;
+  margin: 40px 0;
 }
 
 .greeting h2 {
@@ -121,15 +110,64 @@ body {
   color: #333;
   margin-bottom: 15px;
   font-weight: 600;
-  padding-left: 20%;
+  padding-left: 30%;
 }
 
 .greeting-text {
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 30%;
   text-align: left;
   line-height: 1.8;
   color: #444;
   font-size: 0.95rem;
   max-width: 700px;
+}
+
+/* メインコンテンツカード */
+.main-content {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin: 30px auto;
+  max-width: 600px;
+}
+
+.card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.card ul {
+  list-style: none;
+  line-height: 1.8;
+  color: #333;
+  font-size: 0.95rem;
+  padding-left: 0;
+}
+
+.card a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* フッター */
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #888;
+  font-size: 0.85rem;
+  background: #fff;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
+  margin-top: 40px;
 }
