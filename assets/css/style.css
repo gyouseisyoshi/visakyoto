@@ -1,4 +1,4 @@
-/* リセット */
+/* 基本リセット */
 * {
   margin: 0;
   padding: 0;
@@ -6,73 +6,114 @@
 }
 
 body {
-  font-family: sans-serif; /* 必要に応じてGoogle Fonts等を適用 */
-  background: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
   color: #333;
+  line-height: 1.6;
 }
 
 /* ヘッダー */
 .header {
-  background: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background-color: #fff;
+  padding: 10px 20px;
+  position: relative;
 }
+
 .header-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo {
-  width: 80px;            /* 表示したい直径に合わせる */
-  height: 80px;           /* 正方形に整える */
-  border-radius: 50%;      /* 角を丸くして円形にする */
-  object-fit: cover;       /* 画像を拡大・切り抜きする場合に全体をバランスよく表示 */
+.nav-area {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 .nav-area button {
   padding: 8px 14px;
-  border: none;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  cursor: pointer;
   background-color: #007bff;
   color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
 }
+
 .nav-area button:hover {
   background-color: #0056b3;
 }
 
-/* ヒーローセクション */
+/* Heroセクション */
 .hero {
   position: relative;
-  width: 100%;
-  min-height: 40vh;  /* 好みで調整 */
-  background: linear-gradient(135deg, #d5dde0 0%, #ffffff 80%);
+  background: linear-gradient(to right, #f3f6f8, #ffffff);
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+.hero-inner {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 60px 20px;
+  justify-content: space-between;
+  min-height: 280px;
 }
-.hero-content h1 {
-  font-size: 2.0rem;
+
+.hero-content {
+  width: 50%;
+  z-index: 2;
+  padding: 0 20px;
+}
+
+/* 桜画像フェード */
+.hero-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background-image: url("../images/sakura.jpg");
+  background-size: cover;
+  background-position: center right;
+  mask-image: linear-gradient(to left, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to left, black 60%, transparent 100%);
+  opacity: 0.85;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ロゴ */
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+}
+
+/* 見出し・本文 */
+.hero h1 {
+  font-size: 1.6rem;
   font-weight: 600;
-  margin-bottom: 12px;
-  color: #333;
-}
-.hero-content p {
-  font-size: 1rem;
-  color: #666;
-  line-height: 1.6;
+  color: #222;
   margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 0.95rem;
+  color: #555;
 }
 
 /* ご挨拶セクション */
 .greeting {
-  margin: 40px 0;
+  margin: 30px 0;
 }
 
 .greeting h2 {
@@ -80,63 +121,15 @@ body {
   color: #333;
   margin-bottom: 15px;
   font-weight: 600;
-  padding-left: 25%; /* ← タイトルも左寄せと揃える */
+  padding-left: 20%;
 }
 
 .greeting-text {
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 20%;
+  margin-right: 20%;
   text-align: left;
   line-height: 1.8;
   color: #444;
   font-size: 0.95rem;
   max-width: 700px;
-}
-
-/* メインコンテンツ */
-.main-content {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-.card {
-  background: #fff;
-  border-radius: 10px;
-  padding: 25px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  margin-bottom: 40px;
-  margin-left: 30px;
-  margin-right: 30px;
-}
-.card h2 {
-  margin-bottom: 15px;
-  font-size: 1.4rem;
-  color: #444;
-  margin-left: 30px;
-  margin-right: 30px;
-  
-}
-.card ul {
-  list-style: none;
-  line-height: 1.8;
-  margin-left: 30px;
-  margin-right: 30px;
-}
-.card li a {
-  color: #007bff;
-  text-decoration: none;
-}
-.card li a:hover {
-  text-decoration: underline;
-}
-
-/* フッター */
-.footer {
-  text-align: center;
-  padding: 20px;
-  color: #888;
-  font-size: 0.85rem;
-  background: #fff;
-  box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
-  margin-top: 40px;
 }

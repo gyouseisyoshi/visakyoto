@@ -4,16 +4,14 @@
   <meta charset="UTF-8">
   <title>山田行政書士国際法務事務所</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google Fontsなど必要に応じて読み込み -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-  <!-- ヘッダー部分 -->
   <header class="header">
     <div class="header-inner">
       <div class="logo-area">
-        <img src="assets/images/logo.png" alt="ロゴ" class="logo">
+        <img src="assets/images/logo.png" alt="ロゴ" class="logo" />
       </div>
       <nav class="nav-area">
         <button id="lang-switch">English</button>
@@ -21,93 +19,62 @@
     </div>
   </header>
 
-  <!-- ヒーローセクション -->
   <section class="hero">
-    <!-- 日本語 -->
-    <div class="hero-content lang ja">
-      <h1>山田行政書士国際法務事務所</h1>
-      <p>
-        入管届出済行政書士・文科省認定日本語学校教師<br>
-        やまだ ビザ じむしょ<br>
-        （ぎょうせいしょし・にほんご きょうし）
-      </p>
-    </div>
-
-    <!-- 英語 -->
-    <div class="hero-content lang en" style="display: none;">
-      <h1>Yamada VISA Support Office</h1>
-      <p>
-        Certified Immigration Specialist & Japanese Language Teacher<br>
-      </p>
+    <div class="hero-inner">
+      <div class="hero-content lang ja">
+        <h1>山田行政書士国際法務事務所</h1>
+        <p>
+          入管届出済行政書士・文科省認定日本語学校教師<br>
+          やまだ ビザ じむしょ（ぎょうせいしょし・にほんご きょうし）
+        </p>
+      </div>
+      <div class="hero-content lang en" style="display: none;">        <h1>Yamada VISA Support Office</h1>
+        <p>Certified Immigration Specialist & Japanese Language Teacher</p>
+      </div>
+      <div class="hero-image"></div>
     </div>
   </section>
 
   <!-- ご挨拶セクション -->
-  <!-- 日本語 -->
-<section class="greeting lang ja">
-  <h2>ご挨拶</h2>
-  <p class="greeting-text">
-    外国人の方の在留資格その他補助金申請や生活相談全般、<br>
-    日本語教育等はお気軽にご相談ください。<br>
-    まずはメールでお問い合わせください。<br>
-    法人のご相談も承っています。<br><br>
+  <section class="greeting lang ja">
+    <h2>ご挨拶</h2>
+    <p class="greeting-text">
+      外国人の方の在留資格その他補助金申請や生活相談全般、<br>
+      日本語教育等はお気軽にご相談ください。<br>
+      まずはメールでお問い合わせください。<br>
+      法人のご相談も承っています。<br><br>
+      日本での安全、交通ルールや運転免許の取得、学校や仕事など<br>
+      生活全般のアドバイスや相談に応じます。<br>
+      ご遠慮なくご連絡ください。（内容によってはできないものもあります）
+    </p>
+  </section>
 
-    日本での安全、交通ルールや運転免許の取得、学校や仕事など
-    生活全般のアドバイスや相談に応じます。<br>
-    ご遠慮なくご連絡ください。（内容によってはできないものもあります）
-  </p>
-</section>
+  <section class="greeting lang en" style="display: none;">
+    <h2>Greetings</h2>
+    <p class="greeting-text">
+      We provide support and consultation on visa applications, 
+      subsidy applications, daily-life assistance, and Japanese language education.<br>
+      Feel free to contact us via email. Corporate consultations are also welcome.<br><br>
+      We also offer advice and consultation on various aspects of daily life in Japan,
+      including public safety, traffic rules, obtaining a driver’s license, schools, 
+      and employment.<br>
+      Please feel free to reach out to us anytime.
+      (Depending on the request, we may not be able to assist.)
+    </p>
+  </section>
 
-<!-- 英語 -->
-<section class="greeting lang en" style="display:none;">
-  <h2>Greetings</h2>
-  <p class="greeting-text">
-    Please feel free to contact us for assistance with residencical status, 
-    subsidy applications, daily life consultations, and Japanese language education and support.<br>
-    Please reach out to us by email as a first step.
-    We also accept inquiries from organizations and businesses.<br><br>
+  <script>
+    const switchBtn = document.getElementById("lang-switch");
+    const jaEls = document.querySelectorAll(".lang.ja");
+    const enEls = document.querySelectorAll(".lang.en");
 
-    We offer advice and consultations on general matters of life in Japan, 
-    including safety, traffic rules, obtaining a driver’s license, school, work and so on.<br>
-    Please don’t hesitate to contact us. <br>
-    (Note: Some requests may not be supported depending on the content.)
-  </p>
-</section>
+    switchBtn.addEventListener("click", () => {
+      const isJapanese = jaEls[0].style.display !== "none";
+      jaEls.forEach(el => el.style.display = isJapanese ? "none" : "block");
+      enEls.forEach(el => el.style.display = isJapanese ? "block" : "none");
+      switchBtn.textContent = isJapanese ? "日本語" : "English";
+    });
+  </script>
 
-
-  <!-- メインコンテンツ例（事務所情報など） -->
-  <main class="main-content">
-    <!-- 日本語 -->
-    <section class="lang ja">
-      <div class="card">
-        <h2>事務所所在地・連絡先</h2>
-        <ul>
-          <li>事務所    ：京都市</li>
-          <li>営業時間  :9:00～17:00（土日祝休）</li>
-          <li>メール    :<a href="mailto:visakyoto@yahoo.co.jp">visakyoto@yahoo.co.jp</a></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- 英語 -->
-    <section class="lang en" style="display:none;">
-      <div class="card">
-        <h2>Office Location & Contact</h2>
-        <ul>
-          <li>Office: Kyoto City</li>
-          <li>Business Hours: 9:00–17:00 (Closed Sat, Sun & Public Holidays)</li>
-          <li>Email: <a href="mailto:visakyoto@yahoo.co.jp">visakyoto@yahoo.co.jp</a></li>
-        </ul>
-      </div>
-    </section>
-  </main>
-
-  <!-- フッター -->
-  <footer class="footer">
-    <p>© 2025 Yamada Immigration & International Legal Office</p>
-  </footer>
-
-  <!-- JavaScript -->
-  <script src="assets/js/main.js"></script>
 </body>
 </html>
