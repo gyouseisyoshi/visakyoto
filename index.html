@@ -8,17 +8,21 @@
 </head>
 <body>
 
-  <!-- ヘッダー -->
+  <!-- ✅ ヘッダー -->
   <header class="header">
     <div class="header-inner">
-      <div class="logo-area"></div>
+      <!-- ✅ 左側にロゴ表示 -->
+      <div class="logo-area">
+        <img src="assets/images/logo.png" alt="ロゴ" class="header-logo" />
+      </div>
+      <!-- ✅ 右上に言語切替ボタン -->
       <nav class="nav-area">
         <button id="lang-switch">English</button>
       </nav>
     </div>
   </header>
 
-  <!-- Heroセクション -->
+  <!-- ✅ Heroセクション（ロゴはここには表示しない） -->
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-content lang ja">
@@ -64,9 +68,8 @@
     </p>
   </section>
 
-  <!-- メインコンテンツ例（事務所情報など） -->
+  <!-- メインコンテンツ（事務所情報） -->
   <main class="main-content">
-    <!-- 日本語 -->
     <section class="lang ja">
       <div class="card">
         <h2>事務所所在地・連絡先</h2>
@@ -78,8 +81,7 @@
       </div>
     </section>
 
-    <!-- 英語 -->
-    <section class="lang en" style="display:none;">
+    <section class="lang en" style="display: none;">
       <div class="card">
         <h2>Office Location & Contact</h2>
         <ul>
