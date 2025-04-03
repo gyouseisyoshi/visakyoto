@@ -34,13 +34,20 @@ body {
 }
 
 .nav-area button {
-  padding: 8px 14px;
+  min-width: 80px;
+  height: 36px; /* ✅ 高さを固定 */
+  padding: 0 14px; /* ✅ 上下paddingなし */
   background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 20px;
   cursor: pointer;
   font-size: 0.9rem;
+  line-height: 1; /* ✅ 行間も詰める */
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-area button:hover {
@@ -122,13 +129,14 @@ body {
   max-width: 700px;
 }
 
-/* メインコンテンツカード */
+/* メインコンテンツ */
 .main-content {
   max-width: 1000px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
+/* 通常カード */
 .card {
   background: #ffffff;
   border-radius: 12px;
@@ -142,14 +150,6 @@ body {
   font-size: 1.1rem;
   margin-bottom: 10px;
   color: #222;
-}
-
-.card ul {
-  list-style: none;
-  line-height: 1.8;
-  color: #333;
-  font-size: 0.95rem;
-  padding-left: 0;
 }
 
 .card a {
@@ -172,7 +172,7 @@ body {
   margin-top: 40px;
 }
 
-/* ロゴ画像（ヘッダー内） */
+/* ロゴ画像 */
 .header-logo {
   width: 60px;
   height: 60px;
@@ -180,14 +180,48 @@ body {
   object-fit: cover;
 }
 
-/* nav-area（ボタン）はすでに右上に固定されているためそのまま維持 */
+/* nav-area（ボタン） */
 .nav-area {
   position: absolute;
   top: 20px;
   right: 20px;
 }
 
-/* ✅ モバイル最適化 */
+/* 連絡先リスト（日本語・英語対応） */
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: baseline;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+.contact-info .label {
+  display: inline-block;
+  width: 120px;
+  font-weight: 500;
+  color: #222;
+  white-space: nowrap;
+}
+
+.contact-info .colon {
+  display: inline-block;
+  width: 1em;
+  text-align: center;
+  color: #222;
+}
+
+.contact-info .value {
+  flex: 1;
+  color: #333;
+}
+
+/* モバイル最適化 */
 @media screen and (max-width: 768px) {
   .header-inner {
     flex-direction: column;
@@ -243,7 +277,7 @@ body {
   }
 
   .nav-area {
-    position: static;
+    position: absolute;
     margin-top: 10px;
   }
 
@@ -251,9 +285,22 @@ body {
     width: 50px;
     height: 50px;
   }
+
+  .contact-info .label {
+    width: 100px;
+  }
+
+  .lang.en .contact-info .label {
+    width: 120px;
+  }
 }
 
-/* ✅ PC用Heroセクションの中央寄せ調整（マスク復活） */
+/* 英語表示時のラベル幅調整（PC用） */
+.lang.en .contact-info .label {
+  width: 140px;
+}
+
+/* PC用Hero中央寄せ＋フェード維持 */
 @media screen and (min-width: 769px) {
   .hero-inner {
     max-width: 1000px;
